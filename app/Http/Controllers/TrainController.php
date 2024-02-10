@@ -14,8 +14,8 @@ class TrainController extends Controller
         //$trains = Train::all();
 
         // prendo solo i treni di oggi
-        //$trains = Train::where('departure_date', Carbon::today())->get();
+        // $trains = Train::where('departure_date', Carbon::today())->get();
         $trains = Train::whereDepartureDate(Carbon::today())->get();
         return view('trains',['treni' => $trains]);
-    }  
+    }
 }

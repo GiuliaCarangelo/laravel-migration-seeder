@@ -14,6 +14,7 @@
     </header>
 
     <main>
+        @if($treni->count() > 0)
         <table class="table px-5">
             <thead>
                 <tr>
@@ -68,6 +69,12 @@
                     </td>
                 </tr>
                 @endforeach
+
+                @elseif (count($treni) == 0)
+                <h2 class="py-3">
+                    There are no available trains for today!
+                </h2>
+                @endif
             </tbody>
         </table>
     </main>
