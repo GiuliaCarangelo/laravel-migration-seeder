@@ -62,10 +62,16 @@
                         {{ $treno->total_carriages }}
                     </td>
                     <td>
-                        {{ $treno->on_time }}
+                        @if($treno->on_time == 1)
+                        On Time
+                        @else
+                        Delayed
+                        @endif
                     </td>
                     <td>
-                        {{ $treno->cancelled }}
+                        @if ($treno->cancelled == 1)
+                        <strong>Cancelled</strong>
+                        @endif
                     </td>
                 </tr>
                 @endforeach

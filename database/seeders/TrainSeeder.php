@@ -26,7 +26,7 @@ class TrainSeeder extends Seeder
             $train->train_code = $faker->regexify('[A-Z]{3}[0-9]{3}');
             $train->total_carriages = $faker->numberBetween(1, 13);
             $train->on_time = $faker->boolean(50);
-            $train->cancelled = $faker->boolean(10);
+            $train->cancelled = $faker->boolean(90);
             $train->save();
         }
     }
